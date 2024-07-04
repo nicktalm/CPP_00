@@ -6,7 +6,7 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 15:36:43 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/07/03 17:03:23 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/07/04 11:22:39 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class PhoneBook
 
 int		main(void);
 Contact	addContact(void);
-void	searchContact(void);
+void	searchContact(PhoneBook PhoneBook, int i);
 
 # define WelcomeMessage \
 "\n###########################################\n" \
