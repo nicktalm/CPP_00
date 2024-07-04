@@ -6,68 +6,93 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 15:36:30 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/07/04 16:10:29 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/07/04 17:04:57 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-int	main()
+int main()
 {
-	std::string	command;
-	Contact		contact;
-	PhoneBook	phoneBook;
-	int			i = 0;
-	
-	while(1)
+	std::string command;
+	Contact contact;
+	PhoneBook phoneBook;
+	int i = 0;
+	int j = 0;
+
+	while (1)
 	{
 		std::cout << WelcomeMessage;
 		std::getline(std::cin, command);
 		if (command == "ADD")
 		{
+			if (i >= 8)
+				i = 0;
 			contact = addContact();
 			phoneBook.contacts[i] = contact;
 			i++;
+			if (j < 8)
+				j++;
 		}
 		else if (command == "SEARCH")
-			searchContact(phoneBook, i);
+			searchContact(phoneBook, j);
 		else if (command == "EXIT")
-			break ;
+			break;
 		else
 			std::cout << "Invalid command. Please try again." << std::endl;
 	}
-	return (0);
+	return 0;
 }
 
-Contact	addContact(void)
-{
-	Contact	contact;
-	
-	std::cout << MessageAddContact1;
-	std::string firstName;
-	std::getline(std::cin, firstName);
-	contact.setFirstName(firstName);
-	std::cout << MessageAddContact2;
-	std::string lastName;
-	std::getline(std::cin, lastName);
-	contact.setLastName(lastName);
-	std::cout << MessageAddContact3;
-	std::string nickname;
-	std::getline(std::cin, nickname);
-	contact.setNickname(nickname);
-	std::cout << MessageAddContact4;
-	std::string phoneNumber;
-	std::getline(std::cin, phoneNumber);
-	contact.setPhoneNumber(phoneNumber);
-	std::cout << MessageAddContact5;
-	std::string darkestSecret;
-	std::getline(std::cin, darkestSecret);
-	contact.setDarkestSecret(darkestSecret);
-	return (contact);
+Contact addContact(void) {
+	Contact contact;
+	std::string input;
+
+	std::cout << "Enter first name: ";
+	std::getline(std::cin, input);
+	while (input.empty()) {
+		std::cout << "First name cannot be empty. Please enter first name: ";
+		std::getline(std::cin, input);
+	}
+	contact.setFirstName(input);
+
+	std::cout << "Enter last name: ";
+	std::getline(std::cin, input);
+	while (input.empty()) {
+		std::cout << "Last name cannot be empty. Please enter last name: ";
+		std::getline(std::cin, input);
+	}
+	contact.setLastName(input);
+
+	std::cout << "Enter nickname: ";
+	std::getline(std::cin, input);
+	while (input.empty()) {
+		std::cout << "Nickname cannot be empty. Please enter nickname: ";
+		std::getline(std::cin, input);
+	}
+	contact.setNickname(input);
+
+	std::cout << "Enter phone number: ";
+	std::getline(std::cin, input);
+	while (input.empty()) {
+		std::cout << "Phone number cannot be empty. Please enter phone number: ";
+		std::getline(std::cin, input);
+	}
+	contact.setPhoneNumber(input);
+
+	std::cout << "Enter darkest secret: ";
+	std::getline(std::cin, input);
+	while (input.empty()) {
+		std::cout << "Darkest secret cannot be empty. Please enter darkest secret: ";
+		std::getline(std::cin, input);
+	}
+	contact.setDarkestSecret(input);
+
+	return contact;
 }
 
 
-void searchContact(PhoneBook phoneBook, int i)
+void searchContact(PhoneBook phoneBook, int j)
 {
 	std::string index;
 	
@@ -77,7 +102,8 @@ void searchContact(PhoneBook phoneBook, int i)
 	std::cout << std::setw(10) << "First Name" << "|";
 	std::cout << std::setw(10) << "Last Name" << "|";
 	std::cout << std::setw(10) << "Nickname" << std::endl;
-	for (int a = 0; a < i; a++)
+	std::cout << "---------------------------------------------" << std::endl;
+	for (int a = 0; a < j; a++)
 	{
 		Contact contact = phoneBook.contacts[a];
 		std::cout << std::setw(10) << a << "|";
@@ -95,9 +121,18 @@ void searchContact(PhoneBook phoneBook, int i)
 			std::cout << std::setw(10) << contact.getNickname() << std::endl;
 	}
 	std::cout << std::endl;
-	std::cout << "Enter the index of the contact you would like to see more information on: ";
-	std::getline(std::cin, index);
-	searchPerson(index, phoneBook);
+	while (1)
+	{
+		std::cout << "Enter the index of the contact you would like to see more information on: ";
+		std::getline(std::cin, index);
+		if (index.length() == 1 && index[0] >= '0' && index[0] <= '7' && index[0] - '0' < j)
+		{
+			searchPerson(index, phoneBook);
+			break;
+		}
+		else
+			std::cout << "Invalid index. Please try again." << std::endl;
+	}
 }
 
 void	searchPerson(std::string i, PhoneBook phoneBook)
