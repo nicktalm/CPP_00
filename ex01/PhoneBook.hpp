@@ -6,7 +6,7 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 15:36:43 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/07/04 15:25:23 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/07/05 12:17:46 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,13 +54,14 @@ Contact	addContact(void);
 void	searchContact(PhoneBook PhoneBook, int i);
 void	searchPerson(std::string i, PhoneBook phoneBook);
 
-# define WelcomeMessage \
-"\n###########################################\n" \
-"Please enter one of the following commands:\n" \
-"ADD: Add a new contact ➕\n" \
-"SEARCH: Search for a contact 🔍\n" \
-"EXIT: Exit the PhoneBook ❌\n\n" \
-"Input: "
+#define WelcomeMessage \
+"\n📖📞 \033[1;34m**PhoneBook Menu**\033[0m 📞📖\n" \
+"--------------------------------\n" \
+"Please select one of the following options:\n\n" \
+"\033[1;32m1️⃣  ➕ ADD:\033[0m Add a new contact\n" \
+"\033[1;33m2️⃣  🔍 SEARCH:\033[0m Search for a contact\n" \
+"\033[1;31m3️⃣  ❌ EXIT:\033[0m Exit the PhoneBook\n\n" \
+"\033[1;36mInput:\033[0m "
 
 # define MessageAddContact1 \
 "Enter the first name of the contact: "
