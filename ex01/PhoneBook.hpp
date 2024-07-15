@@ -6,7 +6,7 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 15:36:43 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/07/05 12:17:46 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/07/15 15:29:57 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,18 +28,18 @@ class Contact
 
 	public:
 		// Getter-Funktionen
-		std::string getFirstName() const { return FirstName; }
-		std::string getLastName() const { return LastName; }
-		std::string getNickname() const { return Nickname; }
-		std::string getPhoneNumber() const { return PhoneNumber; }
-		std::string getDarkestSecret() const { return DarkestSecret; }
+		std::string getFirstName() const;
+		std::string getLastName() const;
+		std::string getNickname() const;
+		std::string getPhoneNumber() const;
+		std::string getDarkestSecret() const;
 
 		// Setter-Funktionen
-		void setFirstName(const std::string& value) { FirstName = value; }
-		void setLastName(const std::string& value) { LastName = value; }
-		void setNickname(const std::string& value) { Nickname = value; }
-		void setPhoneNumber(const std::string& value) { PhoneNumber = value; }
-		void setDarkestSecret(const std::string& value) { DarkestSecret = value; }
+		void setFirstName(const std::string& value);
+		void setLastName(const std::string& value);
+		void setNickname(const std::string& value);
+		void setPhoneNumber(const std::string& value);
+		void setDarkestSecret(const std::string& value);
 };
 
 class PhoneBook
