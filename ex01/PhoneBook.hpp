@@ -6,7 +6,7 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 15:36:43 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/07/15 15:29:57 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/07/16 12:12:10 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,10 @@ class Contact
 		std::string DarkestSecret;
 
 	public:
+		// Konstruktor
+		Contact();
+		// Destruktor
+		~Contact();
 		// Getter-Funktionen
 		std::string getFirstName() const;
 		std::string getLastName() const;

@@ -6,11 +6,14 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 15:36:30 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/07/15 15:47:27 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/07/16 12:13:03 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+
+Contact::Contact() {};
+Contact::~Contact() {};
 
 // Getter-Funktionen
 std::string Contact::getFirstName() const{ return FirstName; }
