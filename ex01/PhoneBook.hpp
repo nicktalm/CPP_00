@@ -6,7 +6,7 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 15:36:43 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/07/17 12:54:33 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/07/17 13:07:50 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ class PhoneBook
 	public:
 		Contact	contacts[8];
 };
-
 
 int		main(void);
 Contact	addContact(void);
