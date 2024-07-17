@@ -6,7 +6,7 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 15:36:30 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/07/17 11:07:51 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/07/17 12:54:11 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int main()
 		else
 			std::cout << "Invalid command. Please try again." << std::endl;
 	}
-	return 0;
+	return (0);
 }
 
 Contact addContact(void) {
@@ -70,7 +70,8 @@ Contact addContact(void) {
 	std::getline(std::cin, input);
 	if (std::cin.eof())
 			exit(0);
-	while (input.empty()) {
+	while (input.empty())
+	{
 		std::cerr << "First name cannot be empty. Please enter first name: ";
 		std::getline(std::cin, input);
 		if (std::cin.eof())
@@ -82,7 +83,8 @@ Contact addContact(void) {
 	std::getline(std::cin, input);
 	if (std::cin.eof())
 			exit(0);
-	while (input.empty()) {
+	while (input.empty())
+	{
 		std::cerr << "Last name cannot be empty. Please enter last name: ";
 		std::getline(std::cin, input);
 		if (std::cin.eof())
@@ -94,7 +96,8 @@ Contact addContact(void) {
 	std::getline(std::cin, input);
 	if (std::cin.eof())
 			exit(0);
-	while (input.empty()) {
+	while (input.empty())
+	{
 		std::cerr << "Nickname cannot be empty. Please enter nickname: ";
 		std::getline(std::cin, input);
 		if (std::cin.eof())
@@ -106,7 +109,8 @@ Contact addContact(void) {
 	std::getline(std::cin, input);
 	if (std::cin.eof())
 			exit(0);
-	while (input.empty()) {
+	while (input.empty())
+	{
 		std::cerr << "Phone number cannot be empty. Please enter phone number: ";
 		std::getline(std::cin, input);
 		if (std::cin.eof())
@@ -118,7 +122,8 @@ Contact addContact(void) {
 	std::getline(std::cin, input);
 	if (std::cin.eof())
 			exit(0);
-	while (input.empty()) {
+	while (input.empty())
+	{
 		std::cerr << "Darkest secret cannot be empty. Please enter darkest secret: ";
 		std::getline(std::cin, input);
 		if (std::cin.eof())
@@ -126,7 +131,7 @@ Contact addContact(void) {
 	}
 	contact.setDarkestSecret(input);
 
-	return contact;
+	return (contact);
 }
 
 

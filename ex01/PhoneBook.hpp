@@ -6,7 +6,7 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 15:36:43 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/07/16 12:12:10 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/07/17 12:54:33 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ class Contact
 		std::string getNickname() const;
 		std::string getPhoneNumber() const;
 		std::string getDarkestSecret() const;
-
 		// Setter-Funktionen
 		void setFirstName(const std::string& value);
 		void setLastName(const std::string& value);
