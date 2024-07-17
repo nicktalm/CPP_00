@@ -6,7 +6,7 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 15:36:30 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/07/16 12:13:03 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/07/17 11:07:51 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ Contact addContact(void) {
 	if (std::cin.eof())
 			exit(0);
 	while (input.empty()) {
-		std::cout << "First name cannot be empty. Please enter first name: ";
+		std::cerr << "First name cannot be empty. Please enter first name: ";
 		std::getline(std::cin, input);
 		if (std::cin.eof())
 			exit(0);
@@ -83,7 +83,7 @@ Contact addContact(void) {
 	if (std::cin.eof())
 			exit(0);
 	while (input.empty()) {
-		std::cout << "Last name cannot be empty. Please enter last name: ";
+		std::cerr << "Last name cannot be empty. Please enter last name: ";
 		std::getline(std::cin, input);
 		if (std::cin.eof())
 			exit(0);
@@ -95,7 +95,7 @@ Contact addContact(void) {
 	if (std::cin.eof())
 			exit(0);
 	while (input.empty()) {
-		std::cout << "Nickname cannot be empty. Please enter nickname: ";
+		std::cerr << "Nickname cannot be empty. Please enter nickname: ";
 		std::getline(std::cin, input);
 		if (std::cin.eof())
 			exit(0);
@@ -107,7 +107,7 @@ Contact addContact(void) {
 	if (std::cin.eof())
 			exit(0);
 	while (input.empty()) {
-		std::cout << "Phone number cannot be empty. Please enter phone number: ";
+		std::cerr << "Phone number cannot be empty. Please enter phone number: ";
 		std::getline(std::cin, input);
 		if (std::cin.eof())
 			exit(0);
@@ -119,7 +119,7 @@ Contact addContact(void) {
 	if (std::cin.eof())
 			exit(0);
 	while (input.empty()) {
-		std::cout << "Darkest secret cannot be empty. Please enter darkest secret: ";
+		std::cerr << "Darkest secret cannot be empty. Please enter darkest secret: ";
 		std::getline(std::cin, input);
 		if (std::cin.eof())
 			exit(0);
@@ -171,7 +171,7 @@ void searchContact(PhoneBook phoneBook, int j)
 			break;
 		}
 		else
-			std::cout << "Invalid index. Please try again." << std::endl;
+			std::cerr << "Invalid index. Please try again." << std::endl;
 	}
 }
 
